@@ -1,0 +1,21 @@
+#%Module1.0
+proc ModulesHelp { } {
+        global dotversion
+
+        puts stderr "\tSets environment for tferma/fenics master with petsc-maint-3.3 using debugging."
+}
+module-whatis "Sets environment for FEniCS release."
+prepend-path LD_LIBRARY_PATH "/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/lib"
+prepend-path PATH "/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/bin"
+prepend-path PKG_CONFIG_PATH "/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/lib/pkgconfig"
+prepend-path PYTHONPATH "/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/lib/python2.7/site-packages:/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/lib/python2.7/dist-packages"
+prepend-path MANPATH "/usr/local/tferma/fenics/master/petsc-maint-3.3/debug/share/man"
+
+# Variable to help find dolfin-config.cmake
+#setenv DOLFIN_CMAKE_CONFIG_PATH "/usr/local/FEniCS-rel/share/cmake"
+
+# Special Mac variables
+prepend-path DYLD_FRAMEWORK_PATH "/opt/local/Library/Frameworks"
+
+module load tferma/petsc/maint-3.3/debug
+
