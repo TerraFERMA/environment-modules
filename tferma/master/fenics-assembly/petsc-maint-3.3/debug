@@ -1,0 +1,20 @@
+#%Module1.0
+proc ModulesHelp { } {
+        global dotversion
+
+        puts stderr "	Sets environment for TerraFERMA."
+}
+module-whatis "Sets environment for TerraFERMA and Buckettools."
+
+setenv       BASEBUCKET_CMAKE_PATH /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/share/tferma/cpp
+setenv       BUCKETTOOLS_DIR       /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug
+prepend-path CMAKE_MODULE_PATH     /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/share/buckettools/cmake/modules
+prepend-path PYTHONPATH            /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/lib/python2.7/dist-packages
+prepend-path DIAMOND_CONFIG_PATH   /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/share/buckettools/diamond
+prepend-path PATH                  /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/bin
+
+# Special Environment variables for resolving Dynamic Libraries on MacOSX
+prepend-path DYLD_LIBRARY_PATH     /usr/local/tferma/master/fenics-assembly/petsc-maint-3.3/debug/lib
+
+module load tferma/fenics/master/petsc-maint-3.3/debug
+
