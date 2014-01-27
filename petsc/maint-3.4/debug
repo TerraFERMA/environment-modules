@@ -5,16 +5,14 @@
 proc ModulesHelp { } {
     global mpich_bin
 
-    puts stderr "\tThis module sets environment variables for"
-    puts stderr "\tusing PETSc version 3.3, optimized, with a"
-    puts stderr "\tlocal mpi and gnu compilers"
+    puts stderr "\tPETSc maint 3.4 debug"
     puts stderr ""
 }
 
-module-whatis   "PETSc 3.3 debug environment using Ubuntu's openmpi and gnu compilers"
+module-whatis   "PETSc maint 3.4 debug"
 
-set     petsc_dir /usr/local/tferma/petsc
-set     petsc_arch maint-3.3-debug
+set     petsc_dir /usr/local/petsc
+set     petsc_arch maint-3.4-debug
 set     petsc_lib $petsc_dir/$petsc_arch/lib
 set     petsc_bin $petsc_dir/$petsc_arch/bin
 
