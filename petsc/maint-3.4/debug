@@ -11,14 +11,12 @@ proc ModulesHelp { } {
 
 module-whatis   "PETSc maint 3.4 debug"
 
-set     petsc_dir /usr/local/petsc
-set     petsc_arch maint-3.4-debug
-set     petsc_lib $petsc_dir/$petsc_arch/lib
-set     petsc_bin $petsc_dir/$petsc_arch/bin
+set     petsc_dir /usr/local/petsc/maint-3.4/debug
+set     petsc_lib $petsc_dir/lib
+set     petsc_bin $petsc_dir/bin
 
 prepend-path    PATH            $petsc_bin
 prepend-path    LD_LIBRARY_PATH $petsc_lib
 prepend-path    PYTHONPATH      $petsc_lib/python2.7/site-packages
 setenv          PETSC_DIR       $petsc_dir
-setenv          PETSC_ARCH      $petsc_arch
 
