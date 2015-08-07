@@ -1,0 +1,22 @@
+#%Module1.0
+proc ModulesHelp { } {
+        global dotversion
+
+        puts stderr "\tSets environment for fenics master with petsc-maint."
+}
+module-whatis "Sets environment for FEniCS master with petsc-maint using debugging."
+
+prepend-path LD_LIBRARY_PATH "/usr/local/fenics/master/petsc-maint/reldebug/lib"
+prepend-path PATH "/usr/local/fenics/master/petsc-maint/reldebug/bin"
+prepend-path PKG_CONFIG_PATH "/usr/local/fenics/master/petsc-maint/reldebug/lib/pkgconfig"
+prepend-path PYTHONPATH "/usr/local/fenics/master/petsc-maint/reldebug/lib/python2.7/site-packages:/usr/local/fenics/master/petsc-maint/reldebug/lib/python2.7/dist-packages"
+prepend-path MANPATH "/usr/local/fenics/master/petsc-maint/reldebug/share/man"
+
+# Variable to help find dolfin-config.cmake
+#setenv DOLFIN_CMAKE_CONFIG_PATH "/usr/local/FEniCS-rel/share/cmake"
+
+# Special Mac variables
+prepend-path DYLD_FRAMEWORK_PATH "/opt/local/Library/Frameworks"
+
+module load petsc/maint/opt
+

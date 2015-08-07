@@ -5,13 +5,13 @@
 proc ModulesHelp { } {
     global mpich_bin
 
-    puts stderr "\tPETSc maint 3.4 debug"
+    puts stderr "\tPETSc maint opt"
     puts stderr ""
 }
 
-module-whatis   "PETSc maint 3.4 debug"
+module-whatis   "PETSc maint opt"
 
-set     petsc_dir /usr/local/petsc/maint-3.4/debug
+set     petsc_dir /usr/local/petsc/maint/opt
 set     petsc_lib $petsc_dir/lib
 set     petsc_bin $petsc_dir/bin
 
