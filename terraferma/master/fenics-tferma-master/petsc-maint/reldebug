@@ -6,14 +6,14 @@ proc ModulesHelp { } {
 }
 module-whatis "Sets environment for TerraFERMA and Buckettools."
 
-setenv       TF_CMAKE_PATH         /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/share/terraferma/cpp
-prepend-path CMAKE_MODULE_PATH     /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/share/buckettools/cmake/modules
-prepend-path PYTHONPATH            /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/lib/python2.7/dist-packages:/usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/lib/python2.7/site-packages
-prepend-path DIAMOND_CONFIG_PATH   /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/share/buckettools/diamond
-prepend-path PATH                  /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/bin
+setenv       TF_CMAKE_PATH         /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/share/terraferma/cpp
+prepend-path CMAKE_MODULE_PATH     /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/share/buckettools/cmake/modules
+prepend-path PYTHONPATH            /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/lib/python2.7/dist-packages:/usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/lib/python2.7/site-packages
+prepend-path DIAMOND_CONFIG_PATH   /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/share/buckettools/diamond
+prepend-path PATH                  /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/bin
 
 # Special Environment variables for resolving Dynamic Libraries on MacOSX
-prepend-path DYLD_LIBRARY_PATH     /usr/local/tferma/master/fenics-tferma-master/petsc-maint/reldebug/lib
+prepend-path DYLD_LIBRARY_PATH     /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/reldebug/lib
 
 module load fenics/tferma-master/petsc-maint/reldebug
 
