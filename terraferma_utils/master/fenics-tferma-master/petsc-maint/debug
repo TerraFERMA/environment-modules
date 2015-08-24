@@ -1,0 +1,12 @@
+#%Module1.0
+proc ModulesHelp { } {
+        global dotversion
+
+        puts stderr "Sets environment for TerraFERMA Utilities master with debugging."
+}
+module-whatis "Sets environment for TerraFERMA Utilities with debugging."
+
+prepend-path PYTHONPATH            /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/debug/lib/python2.7/dist-packages:/usr/local/terraferma/master/fenics-tferma-master/petsc-maint/debug/lib/python2.7/site-packages
+prepend-path DIAMOND_CONFIG_PATH   /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/debug/share/terraferma_utils/diamond
+prepend-path PATH                  /usr/local/terraferma/master/fenics-tferma-master/petsc-maint/debug/bin
+

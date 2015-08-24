@@ -1,0 +1,13 @@
+#%Module1.0
+proc ModulesHelp { } {
+        puts stderr "\tSets environment for SPuD (TerraFERMA installtion)"
+}
+module-whatis "SPuD (TerraFERMA)"
+
+set spud_prefix /usr/local/spud
+
+prepend-path LD_LIBRARY_PATH $spud_prefix/lib
+prepend-path PATH            $spud_prefix/bin
+prepend-path PYTHONPATH      $spud_prefix/lib/python2.7/site-packages
+setenv       SPUD_DIR        $spud_prefix
+
